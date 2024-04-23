@@ -1,0 +1,172 @@
+/*Font Windows Command Prompt*/
+@font-face {
+  font-family: "Windows Command Prompt";
+  src: url("fonts/windows_command_prompt.ttf") format("truetype");
+}
+
+:root {
+  --cinzento: #c0c0c0;
+  --cinzento_claro: #d8d8d8;
+  --cinzento_escuro: #8e8e8e;
+  --cinzento_mais_escuro: #aaa;
+  --preto: #0a0a0a;
+  --azul: #2a368e;
+  --branco: #e8e8e8;
+}
+
+/*Body começa aqui*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Windows Command Prompt";
+}
+/*Body acaba aqui*/
+
+/*Caixa de erro começa aqui*/
+.quadrado_grande {
+  background-color: var(--cinzento);
+  color: var(--preto);
+  width: 300px;
+  height: 165px;
+  font-family: "Windows Command Prompt";
+  border-left: var(--branco) 2px solid;
+  border-top: var(--branco) 2px solid;
+  border-right: var(--cinzento_claro) 2px solid;
+  border-bottom: var(--cinzento_claro) 2px solid;
+  padding: 1px;
+  position: absolute;
+}
+.retangulo_azul {
+  background-color: var(--azul);
+  color: var(--branco);
+  font-family: "Windows Command Prompt";
+  padding-top: 0;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 2px 0 #0a0a0a;
+}
+.mensagem_erro {
+  flex-grow: 1;
+  font-size: 17px;
+  margin-left: 2%;
+  margin-top: 5%;
+}
+.botao_fechar {
+  width: 15px;
+  height: 15px;
+}
+.cruz_e_texto {
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+}
+.cruz_circulo {
+  max-width: 30px;
+  max-height: 30px;
+  filter: drop-shadow(1px 1px var(--preto));
+}
+.texto_armcheio {
+  margin-left: 10%;
+  margin-top: 5%;
+  font-size: 20px;
+}
+.botao_da_caixa {
+  text-align: center;
+  padding-bottom: 4%;
+}
+.botao_ok {
+  font-family: "Windows Command Prompt";
+  font-size: 18px;
+  width: 80px;
+  border-radius: 0;
+  background-color: var(--cinzento_claro);
+  border: none;
+  border-right: var(--preto) 2px solid;
+  border-bottom: var(--preto) 2px solid;
+  border-left: var(--branco) 2px solid;
+  border-top: var(--branco) 2px solid;
+  cursor: pointer;
+}
+.botao_ok:hover {
+  box-shadow: 0px 0px 3px #0a0a0a;
+}
+.botao_ok:active {
+  background-color: var(--cinzento_escuro);
+  border-top: var(--preto) 2px solid;
+  border-left: var(--preto) 2px solid;
+  border-right: var(--cinzento_claro) 2px solid;
+  border-bottom: var(--cinzento_claro) 2px solid;
+}
+/*Caixa de erro acaba aqui*/
+/*Header começa aqui*/
+header {
+  font-family: "Windows Command Prompt";
+  padding: 0;
+  margin: 0;
+}
+#logo {
+  max-width: 90px;
+}
+header .container-fluid {
+  background-color: var(--cinzento_mais_escuro);
+  top: 0;
+}
+nav.navbar.navbar-expand-lg.bg-body-tertiary {
+  padding: 0;
+}
+header .nav-link {
+  background-color: var(--cinzento);
+  margin: 4px;
+  border-right: var(--preto) 2px solid;
+  border-bottom: var(--preto) 2px solid;
+  border-left: var(--branco) 2px solid;
+  border-top: var(--branco) 2px solid;
+  cursor: pointer;
+  text-align: center;
+}
+header .nav-link:hover {
+  box-shadow: 0px 0px 3px #0a0a0a;
+}
+header .nav-link:active {
+  background-color: var(--cinzento_escuro);
+  border-top: var(--preto) 2px solid;
+  border-left: var(--preto) 2px solid;
+  border-right: var(--cinzento_claro) 2px solid;
+  border-bottom: var(--cinzento_claro) 2px solid;
+}
+/*Header acaba aqui*/
+
+/*Homepage começa aqui*/
+#homepage {
+  font-family: "Windows Command Prompt";
+  background-color: var(--preto);
+  color: var(--branco);
+}
+#homepage h1 {
+  margin-left: 5%;
+  margin-top: 5%;
+  font-size: 40px;
+}
+#homepage p {
+  margin-left: 5%;
+  margin-top: 3%;
+  text-align: justify;
+  font-size: 25px;
+}
+#homepage .pastas_fechadas {
+  max-width: 100%;
+}
+/*Homepage acaba aqui*/
+/*Footer começa aqui */
+footer {
+  background-color: var(--cinzento_mais_escuro);
+}
+footer .texto_footer {
+  color: var(--preto);
+  text-align: center;
+  border-right: var(--preto) 2px solid;
+}
+/*Footer acaba aqui */
