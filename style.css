@@ -33,8 +33,9 @@ body {
   border-top: var(--branco) 2px solid;
   border-right: var(--cinzento_claro) 2px solid;
   border-bottom: var(--cinzento_claro) 2px solid;
-  padding: 1px;
-  position: absolute;
+  box-shadow: 0 2px 2px 0 --preto;
+  padding: 0.1%;
+  position: fixed;
 }
 .retangulo_azul {
   background-color: var(--azul);
@@ -46,7 +47,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 1px 2px 0 #0a0a0a;
+  box-shadow: 0 1px 2px 0 --preto;
 }
 .mensagem_erro {
   flex-grow: 1;
@@ -55,8 +56,8 @@ body {
   margin-top: 5%;
 }
 .botao_fechar {
-  width: 15px;
-  height: 15px;
+  width: 6%;
+  height: 6%;
 }
 .cruz_e_texto {
   display: flex;
@@ -64,8 +65,8 @@ body {
   margin-left: 15%;
 }
 .cruz_circulo {
-  max-width: 30px;
-  max-height: 30px;
+  max-width: 15%;
+  max-height: 15%;
   filter: drop-shadow(1px 1px var(--preto));
 }
 .texto_armcheio {
@@ -80,7 +81,7 @@ body {
 .botao_ok {
   font-family: "Windows Command Prompt";
   font-size: 18px;
-  width: 80px;
+  width: 30%;
   border-radius: 0;
   background-color: var(--cinzento_claro);
   border: none;
@@ -150,6 +151,9 @@ header .nav-link:active {
   margin-top: 5%;
   font-size: 40px;
 }
+#homepage h2 {
+  margin-bottom: 10%;
+}
 #homepage p {
   margin-left: 5%;
   margin-top: 3%;
@@ -157,16 +161,35 @@ header .nav-link:active {
   font-size: 25px;
 }
 #homepage .pastas_fechadas {
-  max-width: 100%;
+  max-width: 70%;
 }
 /*Homepage acaba aqui*/
 /*Footer começa aqui */
 footer {
   background-color: var(--cinzento_mais_escuro);
+  margin: 0;
+  padding: 0;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  font-size: 10px;
 }
 footer .texto_footer {
+  font-size: 20px;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  text-decoration: none;
   color: var(--preto);
   text-align: center;
   border-right: var(--preto) 2px solid;
+  max-width: fit-content;
+  padding: 1%;
+  background-color: var(--cinzento);
+  border-right: var(--preto) 2px solid;
+  border-bottom: var(--preto) 2px solid;
+  border-left: var(--branco) 2px solid;
+  border-top: var(--branco) 2px solid;
+  cursor: pointer;
+  text-align: center;
 }
+
 /*Footer acaba aqui */
