@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Armazenamento Cheio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="window.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,9 +14,129 @@
     />
   </head>
   <body>
-    <section id="error_window_section"></section>
+    <section id="error_window_section">
+      <div id="quadrado_grande_maior" hidden>
+        <div id="retangulo_azul_maior">
+          <p id="mensagem_erro_maior">Mensagem Sistema</p>
+          <img id="botao_fechar_maior" src="assets/close button.png" />
+        </div>
+        <div id="cruz_e_texto_maiores">
+          <img id="cruz_circulo_maior" src="assets/cross.png" />
+          <p id="texto_armcheio_maior">Armazenamento Cheio</p>
+        </div>
+        <div id="botao_da_caixa_maior">
+          <button id="botao_ok_maior">OK</button>
+        </div>
+      </div>
+    </section>
     <section id="homepage" hidden>
       <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img src="assets/logótipo.png" alt="Logótipo" id="logo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link-alice">Alice Oliveira</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link-anibal">Aníbal Simão</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link-vitor">Vitor Coutinho </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <h1>Colecionismo</h1>
+      <p>
+        Prática de guardar, organizar, selecionar, trocar e expor diversos itens
+        por categoria, em função dos seus interesses pessoais.
+      </p>
+      <h1>Trailer</h1>
+      <video controls>
+        <source src="assets/yee.mp4" type="video/mp4" />
+      </video>
+      <h1>As Coleções</h1>
+      <br />
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <div class="img-container">
+              <img
+                src="assets/folder_closed.png"
+                alt="Pasta fechada"
+                class="pastas_fechadas"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="img-container">
+              <img
+                src="assets/folder_closed.png"
+                alt="Pasta fechada"
+                class="pastas_fechadas"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="img-container">
+              <img
+                src="assets/folder_closed.png"
+                alt="Pasta fechada"
+                class="pastas_fechadas"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="img-container">
+              <h2>SL Benfica</h2>
+            </div>
+          </div>
+          <div class="col">
+            <div class="img-container">
+              <h2>Elvis Presley</h2>
+            </div>
+          </div>
+          <div class="col">
+            <div class="img-container">
+              <h2>The Beatles</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer_pagina">
+        <div class="container text-center">
+          <div class="row justify-content-center">
+            <h3 class="texto_footer">Sobre Nós</h3>
+          </div>
+          <div class="row justify-content-center">
+            <h3 class="texto_footer" id="texto_inicio">
+              <img src="assets/icon_start.png" id="icon_start" />Início
+            </h3>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <section id="Alice_Oliveira" class="paginas_pessoais" hidden>
+      <header class="header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
             <a class="navbar-brand" href="#"
@@ -41,90 +162,59 @@
                   <a class="nav-link">Aníbal Simão</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link">Joaquim Castro </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link">Outra Pessoa</a>
+                  <a class="nav-link">Vitor Coutinho </a>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
       </header>
-      <h1>Colecionismo</h1>
+      <img id="pasta_aberta" src="assets/folder_opened.png" />
+      <h1>Alice Oliveira</h1>
       <p>
-        Prática de guardar, organizar, selecionar, trocar e expor diversos itens
-        por categoria, em função dos seus interesses pessoais.
+        -É uma fã, ou uma adepta?<br />
+        -Sou benfiquista.
+        <br />
+        <br />
+        A Sr. Alice não gosta de falar de outro clube que não o seu. Tem 87 anos
+        e já não corre há muito tempo, mas, em relação ao Benfica, continua a
+        dizer que "quem corre por gosto, não cansa".<br />
+        Num jogo, não faltam os rissóis e o cachecol que vai oferecer ao senhor
+        do banco; em casa, não faltam "benfiquices".
       </p>
-      <h1>As Coleções</h1>
-      <br />
-      <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            <div class="img-container">
-              <img
-                src="assets/folder_closed.png"
-                alt="Pasta fechada"
-                class="pastas_fechadas"
-              />
-            </div>
+      <video controls>
+        <source src="assets/yee.mp4" type="video/mp4" />
+      </video>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/sr_alice_1.JPG" class="d-block w-80" alt="" />
           </div>
-          <div class="col">
-            <div class="img-container">
-              <img
-                src="assets/folder_closed.png"
-                alt="Pasta fechada"
-                class="pastas_fechadas"
-              />
-            </div>
+          <div class="carousel-item">
+            <img src="assets/sr_alice_2.JPG" class="d-block w-80" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/sr_alice_3.JPG" class="d-block w-80" alt="" />
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <div class="img-container">
-              <h2>Alice Oliveira</h2>
-            </div>
-          </div>
-          <div class="col">
-            <div class="img-container">
-              <h2>Aníbal Simão</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            <div class="img-container">
-              <img
-                src="assets/folder_closed.png"
-                alt="Pasta fechada"
-                class="pastas_fechadas"
-              />
-            </div>
-          </div>
-          <div class="col">
-            <div class="img-container">
-              <img
-                src="assets/folder_closed.png"
-                alt="Pasta fechada"
-                class="pastas_fechadas"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="img-container">
-              <h2>Joaquim Castro</h2>
-            </div>
-          </div>
-          <div class="col">
-            <div class="img-container">
-              <h2>Outra Pessoa</h2>
-            </div>
-          </div>
-        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
       <footer class="footer_pagina">
         <div class="container text-center">
@@ -132,7 +222,9 @@
             <h3 class="texto_footer">Sobre Nós</h3>
           </div>
           <div class="row justify-content-center">
-            <h3 class="texto_footer">Início</h3>
+            <h3 class="texto_footer" id="texto_inicio">
+              <img src="assets/icon_start.png" id="icon_start" />Início
+            </h3>
           </div>
         </div>
       </footer>

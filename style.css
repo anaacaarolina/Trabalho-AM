@@ -3,7 +3,7 @@
   font-family: "Windows Command Prompt";
   src: url("fonts/windows_command_prompt.ttf") format("truetype");
 }
-
+/*Definição das cores*/
 :root {
   --cinzento: #c0c0c0;
   --cinzento_claro: #d8d8d8;
@@ -118,20 +118,29 @@ header .container-fluid {
 nav.navbar.navbar-expand-lg.bg-body-tertiary {
   padding: 0;
 }
-header .nav-link {
+header .nav-link-alice,
+.nav-link-anibal,
+.nav-link-vitor {
   background-color: var(--cinzento);
+  padding: 7px;
+  color: var(--preto);
+  cursor: pointer;
+  text-decoration: none;
   margin: 4px;
   border-right: var(--preto) 2px solid;
   border-bottom: var(--preto) 2px solid;
   border-left: var(--branco) 2px solid;
   border-top: var(--branco) 2px solid;
-  cursor: pointer;
   text-align: center;
 }
-header .nav-link:hover {
+header .nav-link-alice:hover,
+header .nav-link-anibal:hover,
+header .nav-link-vitor:hover {
   box-shadow: 0px 0px 3px #0a0a0a;
 }
-header .nav-link:active {
+header.nav-link-alice:active,
+header .nav-link-anibal:active,
+header .nav-link-vitor:active {
   background-color: var(--cinzento_escuro);
   border-top: var(--preto) 2px solid;
   border-left: var(--preto) 2px solid;
@@ -148,7 +157,7 @@ header .nav-link:active {
 }
 #homepage h1 {
   margin-left: 5%;
-  margin-top: 5%;
+  margin-top: 2%;
   font-size: 40px;
 }
 #homepage h2 {
@@ -156,14 +165,72 @@ header .nav-link:active {
 }
 #homepage p {
   margin-left: 5%;
-  margin-top: 3%;
+  margin-top: 2%;
   text-align: justify;
   font-size: 25px;
 }
+#homepage video {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2%;
+}
 #homepage .pastas_fechadas {
-  max-width: 70%;
+  width: 35%;
+  max-width: 187px;
 }
 /*Homepage acaba aqui*/
+/*Páginas Pessoais começa aqui */
+.paginas_pessoais {
+  font-family: "Windows Command Prompt";
+  background-color: var(--preto);
+  color: var(--branco);
+}
+.paginas_pessoais h1 {
+  margin-left: 5%;
+  margin-top: 3%;
+  font-size: 40px;
+}
+.paginas_pessoais h2 {
+  margin-bottom: 10%;
+}
+.paginas_pessoais p {
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-right: 5%;
+  text-align: justify;
+  font-size: 25px;
+}
+.paginas_pessoais video {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+.paginas_pessoais .pastas_fechadas {
+  max-width: 70%;
+}
+.paginas_pessoais #pasta_aberta {
+  max-width: 5%;
+  float: right;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+/*Carrossel de imagens começa aqui*/
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px; /* Adjust the height as needed */
+}
+.carousel-item img {
+  max-height: 100%;
+  max-width: 100%;
+}
+/*Carrossel de imagens acaba aqui*/
+
+/*Páginas Pessoais acaba aqui */
+
 /*Footer começa aqui */
 footer {
   background-color: var(--cinzento_mais_escuro);
@@ -191,5 +258,19 @@ footer .texto_footer {
   cursor: pointer;
   text-align: center;
 }
+footer .texto_footer:hover {
+  box-shadow: 0px 0px 3px #0a0a0a;
+}
+footer .texto_footer:active {
+  background-color: var(--cinzento_escuro);
+  border-top: var(--preto) 2px solid;
+  border-left: var(--preto) 2px solid;
+  border-right: var(--cinzento_claro) 2px solid;
+  border-bottom: var(--cinzento_claro) 2px solid;
+}
 
+footer #icon_start {
+  max-width: 20px;
+  padding-right: 3px;
+}
 /*Footer acaba aqui */
