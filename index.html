@@ -34,7 +34,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
             <a class="navbar-brand" href="#"
-              ><img src="assets/logótipo.png" alt="Logótipo" id="logo"
+              ><img src="assets/logótipo.png" alt="Logótipo"
             /></a>
             <button
               class="navbar-toggler"
@@ -82,6 +82,7 @@
                 src="assets/folder_closed.png"
                 alt="Pasta fechada"
                 class="pastas_fechadas"
+                id="pasta_benfica"
               />
             </div>
           </div>
@@ -91,6 +92,7 @@
                 src="assets/folder_closed.png"
                 alt="Pasta fechada"
                 class="pastas_fechadas"
+                id="pasta_elvis"
               />
             </div>
           </div>
@@ -100,6 +102,7 @@
                 src="assets/folder_closed.png"
                 alt="Pasta fechada"
                 class="pastas_fechadas"
+                id="pasta_beatles"
               />
             </div>
           </div>
@@ -125,10 +128,10 @@
       <footer class="footer_pagina">
         <div class="container text-center">
           <div class="row justify-content-center">
-            <h3 class="texto_footer">Sobre Nós</h3>
+            <h3 class="texto_footer_sobre_nos">Sobre Nós</h3>
           </div>
           <div class="row justify-content-center">
-            <h3 class="texto_footer" id="texto_inicio">
+            <h3 class="texto_footer_texto_inicio">
               <img src="assets/icon_start.png" id="icon_start" />Início
             </h3>
           </div>
@@ -136,11 +139,11 @@
       </footer>
     </section>
     <section id="Alice_Oliveira" class="paginas_pessoais" hidden>
-      <header class="header">
+      <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
             <a class="navbar-brand" href="#"
-              ><img src="assets/logótipo.png" alt="Logótipo" id="logo"
+              ><img src="assets/logótipo.png" alt="Logótipo"
             /></a>
             <button
               class="navbar-toggler"
@@ -156,20 +159,20 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link">Alice Oliveira</a>
+                  <a class="nav-link-alice">Alice Oliveira</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link">Aníbal Simão</a>
+                  <a class="nav-link-anibal">Aníbal Simão</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link">Vitor Coutinho </a>
+                  <a class="nav-link-vitor">Vitor Coutinho </a>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
       </header>
-      <img id="pasta_aberta" src="assets/folder_opened.png" />
+      <img id="pasta_aberta_alice" src="assets/folder_opened.png" />
       <h1>Alice Oliveira</h1>
       <p>
         -É uma fã, ou uma adepta?<br />
@@ -219,10 +222,305 @@
       <footer class="footer_pagina">
         <div class="container text-center">
           <div class="row justify-content-center">
-            <h3 class="texto_footer">Sobre Nós</h3>
+            <h3 class="texto_footer_sobre_nos">Sobre Nós</h3>
           </div>
           <div class="row justify-content-center">
-            <h3 class="texto_footer" id="texto_inicio">
+            <h3 class="texto_footer_texto_inicio">
+              <img src="assets/icon_start.png" id="icon_start" />Início
+            </h3>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <section id="Anibal_Simao" class="paginas_pessoais" hidden>
+      <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img src="assets/logótipo.png" alt="Logótipo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link-alice">Alice Oliveira</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link-anibal">Aníbal Simão</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link-vitor">Vitor Coutinho </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <img id="pasta_aberta_anibal" src="assets/folder_opened.png" />
+      <h1>Aníbal Simão</h1>
+      <p>
+        O Sr. Aníbal Simão é barbeiro em Oliveira de Azeméis. A sua barbearia já
+        tem o armazenamento cheio. As paredes são brancas, mas estão decoradas
+        com objetos de coleção do Elvis Presley que Aníbal foi colecionando ao
+        longo dos anos.
+      </p>
+      <video controls>
+        <source src="assets/yee.mp4" type="video/mp4" />
+      </video>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/sr_alice_1.JPG" class="d-block w-80" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/sr_alice_2.JPG" class="d-block w-80" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/sr_alice_3.JPG" class="d-block w-80" alt="" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <footer class="footer_pagina">
+        <div class="container text-center">
+          <div class="row justify-content-center">
+            <h3 class="texto_footer_sobre_nos">Sobre Nós</h3>
+          </div>
+          <div class="row justify-content-center">
+            <h3 class="texto_footer_texto_inicio">
+              <img src="assets/icon_start.png" id="icon_start" />Início
+            </h3>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <section id="Vitor_Coutinho" class="paginas_pessoais" hidden>
+      <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img src="assets/logótipo.png" alt="Logótipo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link-alice">Alice Oliveira</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link-anibal">Aníbal Simão</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link-vitor">Vitor Coutinho </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <img id="pasta_aberta_vitor" src="assets/folder_opened.png" />
+      <h1>Vitor Coutinho</h1>
+      <p>
+        O Sr. Vitor tem uma ourivesaria em Viana do Casto que toca música dos
+        Beatles desde que abre até à hora que fecha.
+        <br />Mas é em casa que tem o seu armazenamento cheio: uma sala cheia de
+        materiais de coleção dos Beatles, e não só. Porque o bichinho do
+        colecionismo não o deixa em paz
+      </p>
+      <video controls>
+        <source src="assets/yee.mp4" type="video/mp4" />
+      </video>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/sr_alice_1.JPG" class="d-block w-80" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/sr_alice_2.JPG" class="d-block w-80" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/sr_alice_3.JPG" class="d-block w-80" alt="" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <footer class="footer_pagina">
+        <div class="container text-center">
+          <div class="row justify-content-center">
+            <h3 class="texto_footer_sobre_nos">Sobre Nós</h3>
+          </div>
+          <div class="row justify-content-center">
+            <h3 class="texto_footer_texto_inicio">
+              <img src="assets/icon_start.png" id="icon_start" />Início
+            </h3>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <section id="Sobre_Nos" hidden>
+      <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img src="assets/logótipo.png" alt="Logótipo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link-alice">Alice Oliveira</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link-anibal">Aníbal Simão</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link-vitor">Vitor Coutinho </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <h1>Sobre Nós</h1>
+      <h2>O WEBDOCUMENTÁRIO</h2>
+      <p>
+        Tens o armazenamento cheio? Estas pessoas também, e não estão
+        interessadas em libertar espaço.
+      </p>
+      <p>
+        Neste web documentário, três colecionadores abrem as portas das suas
+        casas, barbearias e ourivesarias, para mostras museus privados.
+        Entramos, sem pagar bilhete, nestes "armazenamentos cheios" para
+        conversar sobre o colecionismo
+      </p>
+      <p>
+        O Armazenamento Cheio é um projeto da Unidade Curricular de Atelier
+        Multimédia, do segundo ano da licenciatura em Ciências da Comunicação:
+        Jornalismo, Assessora e Multimédia, da Universidade do Porto
+      </p>
+      <h2>AS DOCUMENTARISTAS</h2>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <div class="img-container">
+              <img
+                src="assets/avatar_beatriz.png"
+                alt="Avatar da Beatriz"
+                class="avatares"
+                id="avatar_beatriz"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="img-container">
+              <img
+                src="assets/avatar_carolina.png"
+                alt="Avatar da Carolina"
+                class="avatares"
+                id="avatar_carolina"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="img-container">
+              <img
+                src="assets/avatar_diana.png"
+                alt="Avatar da Carolina"
+                class="avatares"
+                id="avatar_diana"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="img-container">
+              <h2>Beatriz Castro</h2>
+            </div>
+          </div>
+          <div class="col">
+            <div class="img-container">
+              <h2>Carolina Pinto</h2>
+            </div>
+          </div>
+          <div class="col">
+            <div class="img-container">
+              <h2>Diana Tavares</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer_pagina">
+        <div class="container text-center">
+          <div class="row justify-content-center">
+            <h3 class="texto_footer_sobre_nos">Sobre Nós</h3>
+          </div>
+          <div class="row justify-content-center">
+            <h3 class="texto_footer_texto_inicio">
               <img src="assets/icon_start.png" id="icon_start" />Início
             </h3>
           </div>

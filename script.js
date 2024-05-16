@@ -1,5 +1,5 @@
 let window_counter=0;
-let sections=["error_window_section", "homepage","Alice_Oliveira"];
+let sections=["error_window_section", "homepage","Alice_Oliveira","Anibal_Simao", "Vitor_Coutinho", "Sobre_Nos"];
 
 
 function createWindow(){
@@ -144,3 +144,74 @@ document.getElementById("botao_ok_maior").addEventListener("click", function(){
   hide_all_sections();
   show_section("homepage")
 })  
+
+
+links_pessoas=document.getElementsByClassName("nav-link-alice")
+for(var i=0; i<links_pessoas.length; i++){
+  links_pessoas[i].addEventListener("click", function(){
+    hide_all_sections();
+    show_section("Alice_Oliveira")
+  })
+}
+
+links_pessoas=document.getElementsByClassName("nav-link-anibal")
+for(var i=0; i<links_pessoas.length; i++){
+  links_pessoas[i].addEventListener("click", function(){
+    hide_all_sections();
+    show_section("Anibal_Simao")
+  })
+}
+
+links_pessoas=document.getElementsByClassName("nav-link-vitor")
+for(var i=0; i<links_pessoas.length; i++){
+  links_pessoas[i].addEventListener("click", function(){
+    hide_all_sections();
+    show_section("Vitor_Coutinho")
+  })
+}
+
+links_pessoas=document.getElementsByClassName("texto_footer_sobre_nos")
+for(var i=0; i<links_pessoas.length; i++){
+  links_pessoas[i].addEventListener("click", function(){
+    hide_all_sections();
+    show_section("Sobre_Nos")
+  })
+}
+
+links_pessoas=document.getElementsByClassName("texto_footer_texto_inicio")
+for(var i=0; i<links_pessoas.length; i++){
+  links_pessoas[i].addEventListener("click", function(){
+    hide_all_sections();
+    show_section("homepage")
+  })
+}
+
+document.getElementById("pasta_benfica").addEventListener("click", function(){
+  hide_all_sections();
+  show_section("Alice_Oliveira")
+})  
+
+document.getElementById("pasta_elvis").addEventListener("click", function(){
+  hide_all_sections();
+  show_section("Anibal_Simao")
+}) 
+
+document.getElementById("pasta_beatles").addEventListener("click", function(){
+  hide_all_sections();
+  show_section("Vitor_Coutinho")
+}) 
+
+document.getElementById("pasta_aberta_alice").addEventListener("click", function(){
+  hide_all_sections();
+  show_section("homepage")
+}) 
+
+document.getElementById("pasta_aberta_anibal").addEventListener("click", function(){
+  hide_all_sections();
+  show_section("homepage")
+}) 
+
+document.getElementById("pasta_aberta_vitor").addEventListener("click", function(){
+  hide_all_sections();
+  show_section("homepage")
+}) 

@@ -119,8 +119,8 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary {
   padding: 0;
 }
 header .nav-link-alice,
-.nav-link-anibal,
-.nav-link-vitor {
+header .nav-link-anibal,
+header .nav-link-vitor {
   background-color: var(--cinzento);
   padding: 7px;
   color: var(--preto);
@@ -138,7 +138,7 @@ header .nav-link-anibal:hover,
 header .nav-link-vitor:hover {
   box-shadow: 0px 0px 3px #0a0a0a;
 }
-header.nav-link-alice:active,
+header .nav-link-alice:active,
 header .nav-link-anibal:active,
 header .nav-link-vitor:active {
   background-color: var(--cinzento_escuro);
@@ -176,6 +176,7 @@ header .nav-link-vitor:active {
   margin-top: 2%;
 }
 #homepage .pastas_fechadas {
+  cursor: pointer;
   width: 35%;
   max-width: 187px;
 }
@@ -210,15 +211,18 @@ header .nav-link-vitor:active {
 .paginas_pessoais .pastas_fechadas {
   max-width: 70%;
 }
-.paginas_pessoais #pasta_aberta {
+.paginas_pessoais #pasta_aberta_alice,
+.paginas_pessoais #pasta_aberta_anibal,
+.paginas_pessoais #pasta_aberta_vitor {
   max-width: 5%;
   float: right;
   margin-right: 2%;
   margin-top: 2%;
+  cursor: pointer;
 }
 /*Carrossel de imagens começa aqui*/
 .carousel-item {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   height: 500px; /* Adjust the height as needed */
@@ -231,6 +235,35 @@ header .nav-link-vitor:active {
 
 /*Páginas Pessoais acaba aqui */
 
+/*Sobre Nós começa aqui*/
+#Sobre_Nos {
+  font-family: "Windows Command Prompt";
+  background-color: var(--preto);
+  color: var(--branco);
+}
+#Sobre_Nos h1 {
+  margin-left: 5%;
+  margin-top: 2%;
+  font-size: 40px;
+}
+#Sobre_Nos h2 {
+  margin-bottom: 3%;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+#Sobre_Nos p {
+  margin-left: 5%;
+  margin-top: 2%;
+  text-align: justify;
+  font-size: 25px;
+}
+
+#Sobre_Nos .avatares {
+  width: 35%;
+  max-width: 187px;
+}
+/*Sobre Nós acaba aqui*/
+
 /*Footer começa aqui */
 footer {
   background-color: var(--cinzento_mais_escuro);
@@ -240,10 +273,11 @@ footer {
   padding-bottom: 1%;
   font-size: 10px;
 }
-footer .texto_footer {
+footer .texto_footer_sobre_nos,
+footer .texto_footer_texto_inicio {
   font-size: 20px;
-  margin-top: 1%;
-  margin-bottom: 2%;
+  margin-top: 0.5%;
+  margin-bottom: 1%;
   text-decoration: none;
   color: var(--preto);
   text-align: center;
@@ -258,10 +292,12 @@ footer .texto_footer {
   cursor: pointer;
   text-align: center;
 }
-footer .texto_footer:hover {
+footer .texto_footer_sobre_nos:hover,
+footer .texto_footer_texto_inicio:hover {
   box-shadow: 0px 0px 3px #0a0a0a;
 }
-footer .texto_footer:active {
+footer .texto_footer_sobre_nos:active,
+footer .texto_footer_texto_inicio:active {
   background-color: var(--cinzento_escuro);
   border-top: var(--preto) 2px solid;
   border-left: var(--preto) 2px solid;
@@ -271,6 +307,6 @@ footer .texto_footer:active {
 
 footer #icon_start {
   max-width: 20px;
-  padding-right: 3px;
+  margin-right: 5px;
 }
 /*Footer acaba aqui */
