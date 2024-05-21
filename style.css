@@ -1,7 +1,7 @@
-/*Font Windows Command Prompt*/
+/*Font Windows Regular*/
 @font-face {
-  font-family: "Windows Command Prompt";
-  src: url("fonts/windows_command_prompt.ttf") format("truetype");
+  font-family: "Windows Regular";
+  src: url("fonts/Windows\ Regular.ttf") format("truetype");
 }
 /*Definição das cores*/
 :root {
@@ -18,7 +18,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Windows Command Prompt";
+  font-family: "Windows Regular";
 }
 /*Body acaba aqui*/
 
@@ -28,7 +28,7 @@ body {
   color: var(--preto);
   width: 300px;
   height: 165px;
-  font-family: "Windows Command Prompt";
+  font-family: "Windows Regular";
   border-left: var(--branco) 2px solid;
   border-top: var(--branco) 2px solid;
   border-right: var(--cinzento_claro) 2px solid;
@@ -40,7 +40,7 @@ body {
 .retangulo_azul {
   background-color: var(--azul);
   color: var(--branco);
-  font-family: "Windows Command Prompt";
+  font-family: "Windows Regular";
   padding-top: 0;
   padding-left: 1%;
   padding-right: 1%;
@@ -79,7 +79,7 @@ body {
   padding-bottom: 4%;
 }
 .botao_ok {
-  font-family: "Windows Command Prompt";
+  font-family: "Windows Regular";
   font-size: 18px;
   width: 30%;
   border-radius: 0;
@@ -101,14 +101,104 @@ body {
   border-right: var(--cinzento_claro) 2px solid;
   border-bottom: var(--cinzento_claro) 2px solid;
 }
+#quadrado_grande_maior {
+  display: block;
+  margin: 0 auto;
+  background-color: var(--cinzento);
+  color: var(--preto);
+  width: 600px;
+  height: 330px;
+  font-family: "Windows Regular";
+  border-left: var(--branco) 4px solid;
+  border-top: var(--branco) 4px solid;
+  border-right: var(--cinzento_claro) 4px solid;
+  border-bottom: var(--cinzento_claro) 4px solid;
+  box-shadow: 0 4px 4px 0 --preto;
+  padding: 0.2%;
+  margin-top: 10%;
+  z-index: 1;
+  position: relative;
+}
+#retangulo_azul_maior {
+  background-color: var(--azul);
+  color: var(--branco);
+  font-family: "Windows Regular";
+  padding-top: 0;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px 0 --preto;
+}
+#mensagem_erro_maior {
+  flex-grow: 1;
+  font-size: 34px;
+  margin-left: 2%;
+  margin-top: 5%;
+}
+#botao_fechar_maior {
+  width: 8%;
+  height: 8%;
+}
+#cruz_e_texto_maior {
+  margin-left: 15%;
+}
+#cruz_circulo_maior {
+  position: absolute;
+  max-width: 40%;
+  max-height: 30%;
+  margin-left: 3%;
+  margin-top: -3%;
+  filter: drop-shadow(1.5px 1px var(--preto));
+}
+#texto_armcheio_maior {
+  position: relative;
+  margin-left: 25%;
+  margin-top: 7%;
+  font-size: 40px;
+}
+#botao_da_caixa_maior {
+  position: relative;
+  text-align: center;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+#botao_ok_maior {
+  font-family: "Windows Regular";
+  font-size: 36px;
+  width: 40%;
+  border-radius: 0;
+  background-color: var(--cinzento_claro);
+  border: none;
+  border-right: var(--preto) 2px solid;
+  border-bottom: var(--preto) 2px solid;
+  border-left: var(--branco) 2px solid;
+  border-top: var(--branco) 2px solid;
+  cursor: pointer;
+}
+#botao_ok_maior:hover {
+  box-shadow: 0px 0px 3px #0a0a0a;
+}
+#botao_ok_maior:active {
+  background-color: var(--cinzento_escuro);
+  border-top: var(--preto) 2px solid;
+  border-left: var(--preto) 2px solid;
+  border-right: var(--cinzento_claro) 2px solid;
+  border-bottom: var(--cinzento_claro) 2px solid;
+}
+
 /*Caixa de erro acaba aqui*/
+
 /*Header começa aqui*/
 header {
-  font-family: "Windows Command Prompt";
+  font-family: "Windows Regular";
+  font-size: 20px;
   padding: 0;
   margin: 0;
 }
-#logo {
+.logo {
   max-width: 90px;
 }
 header .container-fluid {
@@ -120,13 +210,18 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary {
 }
 header .nav-link-alice,
 header .nav-link-anibal,
-header .nav-link-vitor {
+header .nav-link-vitor,
+header .nav-link-conclusao {
   background-color: var(--cinzento);
-  padding: 7px;
   color: var(--preto);
   cursor: pointer;
   text-decoration: none;
-  margin: 4px;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  padding-top: fit-content;
+  padding-left: 4px;
+  padding-right: 4px;
   border-right: var(--preto) 2px solid;
   border-bottom: var(--preto) 2px solid;
   border-left: var(--branco) 2px solid;
@@ -135,12 +230,14 @@ header .nav-link-vitor {
 }
 header .nav-link-alice:hover,
 header .nav-link-anibal:hover,
-header .nav-link-vitor:hover {
+header .nav-link-vitor:hover,
+header .nav-link-conclusao:hover {
   box-shadow: 0px 0px 3px #0a0a0a;
 }
 header .nav-link-alice:active,
 header .nav-link-anibal:active,
-header .nav-link-vitor:active {
+header .nav-link-vitor:active,
+header .nav-link-conclusao:active {
   background-color: var(--cinzento_escuro);
   border-top: var(--preto) 2px solid;
   border-left: var(--preto) 2px solid;
@@ -151,7 +248,7 @@ header .nav-link-vitor:active {
 
 /*Homepage começa aqui*/
 #homepage {
-  font-family: "Windows Command Prompt";
+  font-family: "Windows Regular";
   background-color: var(--preto);
   color: var(--branco);
 }
@@ -169,8 +266,9 @@ header .nav-link-vitor:active {
   text-align: justify;
   font-size: 25px;
 }
-#homepage video {
-  width: 70%;
+#homepage .video {
+  max-width: 100%;
+  max-height: 100%;
   display: block;
   margin: 0 auto;
   margin-top: 2%;
@@ -181,9 +279,10 @@ header .nav-link-vitor:active {
   max-width: 187px;
 }
 /*Homepage acaba aqui*/
+
 /*Páginas Pessoais começa aqui */
 .paginas_pessoais {
-  font-family: "Windows Command Prompt";
+  font-family: "Windows Regular";
   background-color: var(--preto);
   color: var(--branco);
 }
@@ -195,15 +294,21 @@ header .nav-link-vitor:active {
 .paginas_pessoais h2 {
   margin-bottom: 10%;
 }
+.paginas_pessoais h5 {
+  font-size: 28px;
+}
 .paginas_pessoais p {
   margin-left: 5%;
   margin-top: 2%;
-  margin-right: 5%;
+  padding-right: 5%;
   text-align: justify;
   font-size: 25px;
 }
-.paginas_pessoais video {
-  width: 70%;
+.paginas_pessoais #video_alice,
+.paginas_pessoais #video_anibal,
+.paginas_pessoais #video_vitor {
+  max-width: 100%;
+  max-height: 100%;
   display: block;
   margin: 0 auto;
   margin-top: 2%;
@@ -224,20 +329,75 @@ header .nav-link-vitor:active {
 .carousel-item {
   display: block;
   justify-content: center;
+  text-align: center;
   align-items: center;
-  height: 500px; /* Adjust the height as needed */
+  height: 500px;
+  width: 60%;
+  margin-bottom: 5%;
+  margin-top: 3%;
 }
+
 .carousel-item img {
   max-height: 100%;
   max-width: 100%;
+  margin: auto;
+}
+.custom-carousel {
+  position: relative;
+}
+
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-caption-top {
+  top: 0;
+  text-align: center;
+  bottom: auto;
+  width: 100%;
+  padding: 10px;
 }
 /*Carrossel de imagens acaba aqui*/
 
 /*Páginas Pessoais acaba aqui */
 
+/*Página Conclusão começa aqui*/
+#Pagina_Conclusao {
+  font-family: "Windows Regular";
+  background-color: var(--preto);
+  color: var(--branco);
+}
+#Pagina_Conclusao h1 {
+  margin-left: 5%;
+  margin-top: 2%;
+  font-size: 40px;
+}
+#Pagina_Conclusao h2 {
+  margin-bottom: 3%;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+#Pagina_Conclusao p {
+  margin-left: 5%;
+  margin-top: 2%;
+  padding-right: 5%;
+  text-align: justify;
+  font-size: 25px;
+}
+#Pagina_Conclusao .video {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+/*Página Conclusao acaba aqui*/
+
 /*Sobre Nós começa aqui*/
 #Sobre_Nos {
-  font-family: "Windows Command Prompt";
+  font-family: "Windows Regular";
   background-color: var(--preto);
   color: var(--branco);
 }
@@ -254,6 +414,7 @@ header .nav-link-vitor:active {
 #Sobre_Nos p {
   margin-left: 5%;
   margin-top: 2%;
+  padding-right: 5%;
   text-align: justify;
   font-size: 25px;
 }
@@ -274,7 +435,7 @@ footer {
   font-size: 10px;
 }
 footer .texto_footer_sobre_nos,
-footer .texto_footer_texto_inicio {
+footer .texto_footer_inicio {
   font-size: 20px;
   margin-top: 0.5%;
   margin-bottom: 1%;
@@ -293,11 +454,11 @@ footer .texto_footer_texto_inicio {
   text-align: center;
 }
 footer .texto_footer_sobre_nos:hover,
-footer .texto_footer_texto_inicio:hover {
+footer .texto_footer_inicio:hover {
   box-shadow: 0px 0px 3px #0a0a0a;
 }
 footer .texto_footer_sobre_nos:active,
-footer .texto_footer_texto_inicio:active {
+footer .texto_footer_inicio:active {
   background-color: var(--cinzento_escuro);
   border-top: var(--preto) 2px solid;
   border-left: var(--preto) 2px solid;
@@ -310,3 +471,29 @@ footer #icon_start {
   margin-right: 5px;
 }
 /*Footer acaba aqui */
+
+/*Scrollbar começa aqui*/
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cinzento_claro);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cinzento);
+  border-right: var(--preto) solid 2px;
+  border-bottom: var(--preto) solid 2px;
+  border-top: var(--branco) solid 2px;
+  border-left: var(--branco) solid 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cinzento_escuro);
+  border-right: var(--branco) solid 2px;
+  border-bottom: var(--branco) solid 2px;
+  border-top: var(--preto) solid 2px;
+  border-left: var(--preto) solid 2px;
+}
+/*Scrollbar acaba aqui*/

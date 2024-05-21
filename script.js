@@ -1,217 +1,268 @@
-let window_counter=0;
-let sections=["error_window_section", "homepage","Alice_Oliveira","Anibal_Simao", "Vitor_Coutinho", "Sobre_Nos"];
+let window_counter = 0;
+let sections = [
+  "error_window_section",
+  "homepage",
+  "Alice_Oliveira",
+  "Anibal_Simao",
+  "Vitor_Coutinho",
+  "Sobre_Nos",
+  "Pagina_Conclusao",
+];
 
+//Criação da Caixa com Mensagem de Erro
 
-function createWindow(){
-    let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+function createWindow() {
+  let vw = Math.max(
+    document.documentElement.clientWidth || 0,
+    window.innerWidth || 0
+  );
+  let vh = Math.max(
+    document.documentElement.clientHeight || 0,
+    window.innerHeight || 0
+  );
 
-    function getRandomCoordinates(min, maxwidth, maxheight) {
-        let x= Math.floor(Math.random() * (maxwidth - min + 1)) + min;
-        let y= Math.floor(Math.random() * (maxheight - min + 1)) + min;
-        return [x,y];
-    }
-    // Create the main container div
-    var quadradoGrandeDiv = document.createElement("div");
-    quadradoGrandeDiv.setAttribute("class", "quadrado_grande");
-    console.log("viewport: ",vw, vh);
-    var coordinates = getRandomCoordinates (0,vw-301, vh-166);
-    quadradoGrandeDiv.style.left = coordinates[0] + "px";
-    quadradoGrandeDiv.style.top = coordinates[1] + "px";
-    console.log("created window at ", coordinates[0], coordinates[1]);
+  //Definir as coordenadas da caixa
+  function getRandomCoordinates(min, maxwidth, maxheight) {
+    let x = Math.floor(Math.random() * (maxwidth - min + 1)) + min;
+    let y = Math.floor(Math.random() * (maxheight - min + 1)) + min;
+    return [x, y];
+  }
 
-    // Create the blue rectangle div
-    var retanguloAzulDiv = document.createElement("div");
-    retanguloAzulDiv.setAttribute("class", "retangulo_azul");
+  var quadradoGrandeDiv = document.createElement("div");
+  quadradoGrandeDiv.setAttribute("class", "quadrado_grande");
+  console.log("viewport: ", vw, vh);
+  var coordinates = getRandomCoordinates(0, vw - 301, vh - 166);
+  quadradoGrandeDiv.style.left = coordinates[0] + "px";
+  quadradoGrandeDiv.style.top = coordinates[1] + "px";
+  console.log("created window at ", coordinates[0], coordinates[1]);
 
-    // Create the error message paragraph
-    var mensagemErroP = document.createElement("p");
-    mensagemErroP.setAttribute("class", "mensagem_erro");
-    mensagemErroP.textContent = "Mensagem sistema";
+  var retanguloAzulDiv = document.createElement("div");
+  retanguloAzulDiv.setAttribute("class", "retangulo_azul");
 
-    // Create the close button image
-    var botaoFecharImg = document.createElement("img");
-    botaoFecharImg.setAttribute("class", "botao_fechar");
-    botaoFecharImg.setAttribute("src", "assets/close button.png");
+  var mensagemErroP = document.createElement("p");
+  mensagemErroP.setAttribute("class", "mensagem_erro");
+  mensagemErroP.textContent = "Mensagem sistema";
 
-    // Append the error message paragraph and close button image to the blue rectangle div
-    retanguloAzulDiv.appendChild(mensagemErroP);
-    retanguloAzulDiv.appendChild(botaoFecharImg);
+  var botaoFecharImg = document.createElement("img");
+  botaoFecharImg.setAttribute("class", "botao_fechar");
+  botaoFecharImg.setAttribute("src", "assets/Imagens/botao_fechar.png");
 
-    // Create the cross and text div
-    var cruzETextoDiv = document.createElement("div");
-    cruzETextoDiv.setAttribute("class", "cruz_e_texto");
+  retanguloAzulDiv.appendChild(mensagemErroP);
+  retanguloAzulDiv.appendChild(botaoFecharImg);
 
-    // Create the cross image
-    var cruzCirculoImg = document.createElement("img");
-    cruzCirculoImg.setAttribute("src", "assets/cross.png");
-    cruzCirculoImg.setAttribute("class", "cruz_circulo");
+  var cruzETextoDiv = document.createElement("div");
+  cruzETextoDiv.setAttribute("class", "cruz_e_texto");
 
-    // Create the storage full text paragraph
-    var textoArmcheioP = document.createElement("p");
-    textoArmcheioP.setAttribute("class", "texto_armcheio");
-    textoArmcheioP.textContent = "Armazenamento Cheio";
+  var cruzCirculoImg = document.createElement("img");
+  cruzCirculoImg.setAttribute("src", "assets/Imagens/cruz.png");
+  cruzCirculoImg.setAttribute("class", "cruz_circulo");
 
-    // Append the cross image and storage full text paragraph to the cross and text div
-    cruzETextoDiv.appendChild(cruzCirculoImg);
-    cruzETextoDiv.appendChild(textoArmcheioP);
+  var textoArmcheioP = document.createElement("p");
+  textoArmcheioP.setAttribute("class", "texto_armcheio");
+  textoArmcheioP.textContent = "Armazenamento Cheio";
 
-    // Create the button div
-    var botaoDaCaixaDiv = document.createElement("div");
-    botaoDaCaixaDiv.setAttribute("class", "botao_da_caixa");
+  cruzETextoDiv.appendChild(cruzCirculoImg);
+  cruzETextoDiv.appendChild(textoArmcheioP);
 
-    // Create the OK button
-    var botaoOKButton = document.createElement("button");
-    botaoOKButton.setAttribute("class", "botao_ok");
-    botaoOKButton.textContent = "OK";
-    botaoOKButton.addEventListener("click", createWindow);
+  var botaoDaCaixaDiv = document.createElement("div");
+  botaoDaCaixaDiv.setAttribute("class", "botao_da_caixa");
 
-    // Append the OK button to the button div
-    botaoDaCaixaDiv.appendChild(botaoOKButton);
+  var botaoOKButton = document.createElement("button");
+  botaoOKButton.setAttribute("class", "botao_ok");
+  botaoOKButton.textContent = "OK";
+  botaoOKButton.addEventListener("click", createWindow);
 
-    // Append the blue rectangle div, cross and text div, and button div to the main container div
-    quadradoGrandeDiv.appendChild(retanguloAzulDiv);
-    quadradoGrandeDiv.appendChild(cruzETextoDiv);
-    quadradoGrandeDiv.appendChild(botaoDaCaixaDiv);
+  botaoDaCaixaDiv.appendChild(botaoOKButton);
 
+  quadradoGrandeDiv.appendChild(retanguloAzulDiv);
+  quadradoGrandeDiv.appendChild(cruzETextoDiv);
+  quadradoGrandeDiv.appendChild(botaoDaCaixaDiv);
 
+  document
+    .getElementById("error_window_section")
+    .appendChild(quadradoGrandeDiv);
 
-    // Append the main container div to the document body
-    document.getElementById("error_window_section").appendChild(quadradoGrandeDiv);
+  window_counter++;
 
-    window_counter++;
+  //  play_audio("Som_erro.mp3");
 
-    check_window_counter_threshold();
+  check_window_counter_threshold();
 }
 
+//Função que verifica e compara se o número de janelas ultrapassa o limite definido em baixo + criação da caixa de erro final.
 function check_window_counter_threshold() {
-    let auto_threshold = 2; //2
-    let limit_threshold = 2; //30
-    if (window_counter >= limit_threshold) { 
-      document.getElementById("quadrado_grande_maior").hidden=false;
-    }
-    else if (window_counter >= auto_threshold) {
-        setTimeout(createWindow, 8000/(window_counter*3));
-    }
-
-}
-
-function toggle_visibilidade(elem_id) {
-  var elem = document.getElementById(elem_id);
-  elem.hidden=!elem.hidden
-}
-
-function hide_all_sections(){
-  for(var i=0; i<sections.length; i++){
-    document.getElementById(sections[i]).hidden=true;
+  let auto_threshold = 1; //Limite de janelas até começar a criação automática //2
+  let limit_threshold = 1; //Limite até criação da janela maior //30
+  if (window_counter >= limit_threshold) {
+    document.getElementById("quadrado_grande_maior").hidden = false;
+    // play_audio("Som_erro_95.mp3");
+  } else if (window_counter >= auto_threshold) {
+    setTimeout(createWindow, 8000 / (window_counter * 3)); //Função de aceleração do tempo entre criação de janelas
   }
 }
-function show_section(section_id){
-document.getElementById(section_id).hidden=false; 
+
+//Esconde todas as secções. O "i" (iterador) vai variar entre 0 e sections.length-1 (o número de secções), neste caso 5???. Vai correr o que está dentro do loop o número, mas com cada elemento que está dentro do array "sections", um de cada vez. Em cada elemento, vai passar o elemento hidden para true, mesmo que a propriedade já seja true.
+function hide_all_sections() {
+  for (var i = 0; i < sections.length; i++) {
+    document.getElementById(sections[i]).hidden = true;
+  }
 }
 
-//setTimeout(function() {...}, 1000);
+//Muda a propriedade hidden de true para false. Ou seja, mostra uma secção com base no seu Id, passado como argumento à função
+function show_section(section_id) {
+  document.getElementById(section_id).hidden = false;
+}
 
+//Recebe como argumento o nome de ficheiro, neste caso audio, viaja até ao diretório onde o ficheiro está (assets) e ativa-o.
+function play_audio(filename) {
+  let som = new Audio("assets/" + filename);
+  som.play();
+}
 
+//A partir daqui, as funções começam a ser úteis.
 
+//Chamamento da função
 createWindow();
 
 //Mudar imagem das pastas da página inicial
-document.addEventListener("DOMContentLoaded", function() {
-  
+
+document.addEventListener("DOMContentLoaded", function () {
   function abrirPasta(event) {
     var elementoPasta = event.target;
-    if (elementoPasta.src.endsWith("assets/folder_closed.png")) {
-      elementoPasta.src = "assets/folder_opened.png";
+    if (elementoPasta.src.endsWith("assets/Imagens/pasta_fechada.png")) {
+      elementoPasta.src = "assets/Imagens/pasta_aberta.png";
     }
   }
-  
+
   function fecharPasta(event) {
     var elementoPasta = event.target;
-    if (elementoPasta.src.endsWith("assets/folder_opened.png")) {
-      elementoPasta.src = "assets/folder_closed.png";
+    if (elementoPasta.src.endsWith("assets/Imagens/pasta_aberta.png")) {
+      elementoPasta.src = "assets/Imagens/pasta_fechada.png";
     }
   }
   var elementosPastas = document.getElementsByClassName("pastas_fechadas");
-    
+
   for (var i = 0; i < elementosPastas.length; i++) {
     elementosPastas[i].addEventListener("mouseover", abrirPasta);
     elementosPastas[i].addEventListener("mouseout", fecharPasta);
   }
 });
 
-document.getElementById("botao_ok_maior").addEventListener("click", function(){
-  hide_all_sections();
-  show_section("homepage")
-})  
-
-
-links_pessoas=document.getElementsByClassName("nav-link-alice")
-for(var i=0; i<links_pessoas.length; i++){
-  links_pessoas[i].addEventListener("click", function(){
+//Ligações entre as páginas
+document
+  .getElementById("botao_ok_maior")
+  .addEventListener("click", function () {
     hide_all_sections();
-    show_section("Alice_Oliveira")
-  })
+    show_section("homepage");
+  });
+
+/*Os links do header e do footer tiveram de ser feitos de maneiras diferentes, comparativamente às restantes ligações entre páginas, pois são repetidas em todas as páginas. Usando o link do header para a Alice Oliveira, como exemplo do que foi feito:
+Primeiro, foi definida a variável "links_alice", ela vai buscar ao ficheiro HTML todos os elementos que tenham a classe "nav-link-alice" e vai guarda-las dentro de um array.
+Depois, num for, é estabelecido um iterador (i) que vai correr enquanto for menor ao número de elementos no array (o comprimento do array com o nome "links_alice")
+Na linha abaixo, o links_alice[i], vai substituir o i pelo número de vezes que já correu. Adiciona um Event Listener, que vai executar a função quando o elemento for alvo de um click
+Neste caso, a função vai executar a hide_all_sections e a show_section. Esta section vai ter o atributo "Alice Oliveira". O mesmo repete-se para as outras ligações dos headers e dos footers.*/
+links_alice = document.getElementsByClassName("nav-link-alice");
+for (var i = 0; i < links_alice.length; i++) {
+  links_alice[i].addEventListener("click", function () {
+    hide_all_sections();
+    show_section("Alice_Oliveira");
+  });
+}
+/*
+links_alice[0].addEventListener("click", function () {
+  hide_all_sections();
+  show_section("Alice_Oliveira");
+});
+links_alice[1].addEventListener("click", function () {
+  hide_all_sections();
+  show_section("Alice_Oliveira");
+});
+links_alice[2].addEventListener("click", function () {
+  hide_all_sections();
+  show_section("Alice_Oliveira");
+});
+*/
+
+links_anibal = document.getElementsByClassName("nav-link-anibal");
+for (var i = 0; i < links_anibal.length; i++) {
+  links_anibal[i].addEventListener("click", function () {
+    hide_all_sections();
+    show_section("Anibal_Simao");
+  });
 }
 
-links_pessoas=document.getElementsByClassName("nav-link-anibal")
-for(var i=0; i<links_pessoas.length; i++){
-  links_pessoas[i].addEventListener("click", function(){
+links_vitor = document.getElementsByClassName("nav-link-vitor");
+for (var i = 0; i < links_vitor.length; i++) {
+  links_vitor[i].addEventListener("click", function () {
     hide_all_sections();
-    show_section("Anibal_Simao")
-  })
+    show_section("Vitor_Coutinho");
+  });
 }
 
-links_pessoas=document.getElementsByClassName("nav-link-vitor")
-for(var i=0; i<links_pessoas.length; i++){
-  links_pessoas[i].addEventListener("click", function(){
+links_conclusao = document.getElementsByClassName("nav-link-conclusao");
+for (var i = 0; i < links_conclusao.length; i++) {
+  links_conclusao[i].addEventListener("click", function () {
     hide_all_sections();
-    show_section("Vitor_Coutinho")
-  })
+    show_section("Pagina_Conclusao");
+  });
 }
 
-links_pessoas=document.getElementsByClassName("texto_footer_sobre_nos")
-for(var i=0; i<links_pessoas.length; i++){
-  links_pessoas[i].addEventListener("click", function(){
+links_sobre_nos = document.getElementsByClassName("texto_footer_sobre_nos");
+for (var i = 0; i < links_sobre_nos.length; i++) {
+  links_sobre_nos[i].addEventListener("click", function () {
     hide_all_sections();
-    show_section("Sobre_Nos")
-  })
+    show_section("Sobre_Nos");
+  });
 }
 
-links_pessoas=document.getElementsByClassName("texto_footer_texto_inicio")
-for(var i=0; i<links_pessoas.length; i++){
-  links_pessoas[i].addEventListener("click", function(){
+links_inicio = document.getElementsByClassName("texto_footer_inicio");
+for (var i = 0; i < links_inicio.length; i++) {
+  links_inicio[i].addEventListener("click", function () {
     hide_all_sections();
-    show_section("homepage")
-  })
+    show_section("homepage");
+  });
 }
 
-document.getElementById("pasta_benfica").addEventListener("click", function(){
+links_logotipo = document.getElementsByClassName("logo");
+for (var i = 0; i < links_logotipo.length; i++) {
+  links_logotipo[i].addEventListener("click", function () {
+    hide_all_sections();
+    show_section("homepage");
+  });
+}
+//Aqui, as ligações entre páginas são feitas de maneira diferente. O JavaScript vai buscar ao HTML o elemento com o Id "pasta_benfica", vai adicionar um event listener, que vai esperar por um click. Quando esse click acontecer, vai esconder todas as secções e mostrar apenas a "Alice_Oliveira". Este processo difere do exemplo anterior, devido ao elemento do HTML: como apenas existe um elemento com este Id por página, não existe necessidade de usar loops (fors).
+document.getElementById("pasta_benfica").addEventListener("click", function () {
   hide_all_sections();
-  show_section("Alice_Oliveira")
-})  
+  show_section("Alice_Oliveira");
+});
 
-document.getElementById("pasta_elvis").addEventListener("click", function(){
+document.getElementById("pasta_elvis").addEventListener("click", function () {
   hide_all_sections();
-  show_section("Anibal_Simao")
-}) 
+  show_section("Anibal_Simao");
+});
 
-document.getElementById("pasta_beatles").addEventListener("click", function(){
+document.getElementById("pasta_beatles").addEventListener("click", function () {
   hide_all_sections();
-  show_section("Vitor_Coutinho")
-}) 
+  show_section("Vitor_Coutinho");
+});
 
-document.getElementById("pasta_aberta_alice").addEventListener("click", function(){
-  hide_all_sections();
-  show_section("homepage")
-}) 
+document
+  .getElementById("pasta_aberta_alice")
+  .addEventListener("click", function () {
+    hide_all_sections();
+    show_section("homepage");
+  });
 
-document.getElementById("pasta_aberta_anibal").addEventListener("click", function(){
-  hide_all_sections();
-  show_section("homepage")
-}) 
+document
+  .getElementById("pasta_aberta_anibal")
+  .addEventListener("click", function () {
+    hide_all_sections();
+    show_section("homepage");
+  });
 
-document.getElementById("pasta_aberta_vitor").addEventListener("click", function(){
-  hide_all_sections();
-  show_section("homepage")
-}) 
+document
+  .getElementById("pasta_aberta_vitor")
+  .addEventListener("click", function () {
+    hide_all_sections();
+    show_section("homepage");
+  });
