@@ -263,6 +263,7 @@ header .nav-link-conclusao:active {
 #homepage p {
   margin-left: 5%;
   margin-top: 2%;
+  padding-right: 5%;
   text-align: justify;
   font-size: 25px;
 }
@@ -272,6 +273,7 @@ header .nav-link-conclusao:active {
   display: block;
   margin: 0 auto;
   margin-top: 2%;
+  margin-bottom: 5%;
 }
 #homepage .pastas_fechadas {
   cursor: pointer;
@@ -312,6 +314,7 @@ header .nav-link-conclusao:active {
   display: block;
   margin: 0 auto;
   margin-top: 2%;
+  margin-bottom: 5%;
 }
 .paginas_pessoais .pastas_fechadas {
   max-width: 70%;
@@ -326,38 +329,55 @@ header .nav-link-conclusao:active {
   cursor: pointer;
 }
 /*Carrossel de imagens começa aqui*/
-.carousel-item {
-  display: block;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  height: 500px;
-  width: 60%;
-  margin-bottom: 5%;
-  margin-top: 3%;
-}
-
-.carousel-item img {
-  max-height: 100%;
-  max-width: 100%;
-  margin: auto;
-}
-.custom-carousel {
+.carrossel {
   position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
 }
-
-.custom-carousel .carousel-control-prev,
-.custom-carousel .carousel-control-next {
+.carrossel img {
+  max-height: 400px;
+  display: none;
+}
+img.display_slide {
+  display: block;
+  margin: auto;
+  margin-bottom: 5%;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.carrossel label {
+  display: none;
+}
+p.display_p {
+  display: block;
+  text-align: center;
+}
+.carrossel button {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
 }
-.carousel-caption-top {
-  top: 0;
-  text-align: center;
-  bottom: auto;
-  width: 100%;
-  padding: 10px;
+.prev {
+  left: 0;
 }
+.next {
+  right: 0;
+}
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*.legenda_vitor {
+  position: absolute;
+} */
 /*Carrossel de imagens acaba aqui*/
 
 /*Páginas Pessoais acaba aqui */
@@ -420,8 +440,8 @@ header .nav-link-conclusao:active {
 }
 
 #Sobre_Nos .avatares {
-  width: 35%;
-  max-width: 187px;
+  width: 40%;
+  max-width: 120%;
 }
 /*Sobre Nós acaba aqui*/
 

@@ -1,5 +1,5 @@
 let window_counter = 0;
-let sections = [
+const sections = [
   "error_window_section",
   "homepage",
   "Alice_Oliveira",
@@ -8,6 +8,20 @@ let sections = [
   "Sobre_Nos",
   "Pagina_Conclusao",
 ];
+
+const slides_alice = document.querySelectorAll(".slides_alice img");
+const slides_anibal = document.querySelectorAll(".slides_anibal img");
+const slides_vitor = document.querySelectorAll(".slides_vitor img");
+//const legenda_slides_vitor = document.querySelectorAll(".slides_vitor p");
+
+//const slides_label = document.querySelectorAll(".slides label");
+//console.log(slides.length);
+//console.log(slides_label.length);
+
+let slide_alice_index = 0;
+let slide_anibal_index = 0;
+let slide_vitor_index = 0;
+let interval_id = null;
 
 //Criação da Caixa com Mensagem de Erro
 
@@ -84,18 +98,18 @@ function createWindow() {
 
   window_counter++;
 
-  //  play_audio("Som_erro.mp3");
+  play_audio("Som_erro.mp3");
 
   check_window_counter_threshold();
 }
 
 //Função que verifica e compara se o número de janelas ultrapassa o limite definido em baixo + criação da caixa de erro final.
 function check_window_counter_threshold() {
-  let auto_threshold = 1; //Limite de janelas até começar a criação automática //2
-  let limit_threshold = 1; //Limite até criação da janela maior //30
+  let auto_threshold = 2; //Limite de janelas até começar a criação automática //2
+  let limit_threshold = 30; //Limite até criação da janela maior //30
   if (window_counter >= limit_threshold) {
     document.getElementById("quadrado_grande_maior").hidden = false;
-    // play_audio("Som_erro_95.mp3");
+    play_audio("Som_erro_95.mp3");
   } else if (window_counter >= auto_threshold) {
     setTimeout(createWindow, 8000 / (window_counter * 3)); //Função de aceleração do tempo entre criação de janelas
   }
@@ -121,9 +135,6 @@ function play_audio(filename) {
 
 //A partir daqui, as funções começam a ser úteis.
 
-//Chamamento da função
-createWindow();
-
 //Mudar imagem das pastas da página inicial
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -140,12 +151,19 @@ document.addEventListener("DOMContentLoaded", function () {
       elementoPasta.src = "assets/Imagens/pasta_fechada.png";
     }
   }
+
   var elementosPastas = document.getElementsByClassName("pastas_fechadas");
 
   for (var i = 0; i < elementosPastas.length; i++) {
     elementosPastas[i].addEventListener("mouseover", abrirPasta);
     elementosPastas[i].addEventListener("mouseout", fecharPasta);
   }
+
+  //Chamamento da função
+  createWindow();
+  começar_carrossel_alice();
+  começar_carrossel_anibal();
+  começar_carrossel_vitor();
 });
 
 //Ligações entre as páginas
@@ -156,11 +174,6 @@ document
     show_section("homepage");
   });
 
-/*Os links do header e do footer tiveram de ser feitos de maneiras diferentes, comparativamente às restantes ligações entre páginas, pois são repetidas em todas as páginas. Usando o link do header para a Alice Oliveira, como exemplo do que foi feito:
-Primeiro, foi definida a variável "links_alice", ela vai buscar ao ficheiro HTML todos os elementos que tenham a classe "nav-link-alice" e vai guarda-las dentro de um array.
-Depois, num for, é estabelecido um iterador (i) que vai correr enquanto for menor ao número de elementos no array (o comprimento do array com o nome "links_alice")
-Na linha abaixo, o links_alice[i], vai substituir o i pelo número de vezes que já correu. Adiciona um Event Listener, que vai executar a função quando o elemento for alvo de um click
-Neste caso, a função vai executar a hide_all_sections e a show_section. Esta section vai ter o atributo "Alice Oliveira". O mesmo repete-se para as outras ligações dos headers e dos footers.*/
 links_alice = document.getElementsByClassName("nav-link-alice");
 for (var i = 0; i < links_alice.length; i++) {
   links_alice[i].addEventListener("click", function () {
@@ -168,20 +181,6 @@ for (var i = 0; i < links_alice.length; i++) {
     show_section("Alice_Oliveira");
   });
 }
-/*
-links_alice[0].addEventListener("click", function () {
-  hide_all_sections();
-  show_section("Alice_Oliveira");
-});
-links_alice[1].addEventListener("click", function () {
-  hide_all_sections();
-  show_section("Alice_Oliveira");
-});
-links_alice[2].addEventListener("click", function () {
-  hide_all_sections();
-  show_section("Alice_Oliveira");
-});
-*/
 
 links_anibal = document.getElementsByClassName("nav-link-anibal");
 for (var i = 0; i < links_anibal.length; i++) {
@@ -230,7 +229,7 @@ for (var i = 0; i < links_logotipo.length; i++) {
     show_section("homepage");
   });
 }
-//Aqui, as ligações entre páginas são feitas de maneira diferente. O JavaScript vai buscar ao HTML o elemento com o Id "pasta_benfica", vai adicionar um event listener, que vai esperar por um click. Quando esse click acontecer, vai esconder todas as secções e mostrar apenas a "Alice_Oliveira". Este processo difere do exemplo anterior, devido ao elemento do HTML: como apenas existe um elemento com este Id por página, não existe necessidade de usar loops (fors).
+
 document.getElementById("pasta_benfica").addEventListener("click", function () {
   hide_all_sections();
   show_section("Alice_Oliveira");
@@ -266,3 +265,119 @@ document
     hide_all_sections();
     show_section("homepage");
   });
+
+// Seguem-se as funções referentes aos carrosseis de imagens
+//Primeiro o carrossel da Alice Oliveira
+function começar_carrossel_alice() {
+  if (slides_alice.length > 0) {
+    slides_alice[slide_alice_index].classList.add("display_slide");
+    // slides_label[slide_alice_index].classList.add("display_label");
+    interval_id = setInterval(next_slide_alice, 20000);
+  }
+}
+
+function show_slide_alice(index) {
+  if (index >= slides_alice.length) {
+    slide_alice_index = 0;
+  } else if (index < 0) {
+    slide_alice_index = slides_alice.length - 1;
+  } else {
+    slide_alice_index = index;
+  }
+
+  slides_alice.forEach(slide => {
+    slide.classList.remove("display_slide");
+    // slides_label.classList.remove("display_label");
+  });
+
+  slides_alice[slide_alice_index].classList.add("display_slide");
+  // slides_label[slide_alice_index].classList.add("display_label");
+}
+
+function prev_slide_alice() {
+  clearInterval(interval_id);
+  slide_alice_index--;
+  show_slide_alice(slide_alice_index);
+}
+
+function next_slide_alice() {
+  clearInterval(interval_id);
+  slide_alice_index++;
+  show_slide_alice(slide_alice_index);
+}
+
+//Depois o carrossel do Anibal Simão
+function começar_carrossel_anibal() {
+  if (slides_anibal.length > 0) {
+    slides_anibal[slide_anibal_index].classList.add("display_slide");
+    // slides_label[slide_anibal_index].classList.add("display_label");
+    interval_id = setInterval(next_slide_anibal, 15000);
+  }
+}
+
+function show_slide_anibal(index) {
+  if (index >= slides_anibal.length) {
+    slide_anibal_index = 0;
+  } else if (index < 0) {
+    slide_anibal_index = slides_anibal.length - 1;
+  } else {
+    slide_anibal_index = index;
+  }
+
+  slides_anibal.forEach(slide => {
+    slide.classList.remove("display_slide");
+    // slides_label.classList.remove("display_label");
+  });
+
+  slides_anibal[slide_anibal_index].classList.add("display_slide");
+  // slides_label[slide_anibal_index].classList.add("display_label");
+}
+function prev_slide_anibal() {
+  clearInterval(interval_id);
+  slide_anibal_index--;
+  show_slide_anibal(slide_anibal_index);
+}
+
+function next_slide_anibal() {
+  clearInterval(interval_id);
+  slide_anibal_index++;
+  show_slide_anibal(slide_anibal_index);
+}
+
+//Finalmente, o carrossel do Vitor Coutinho
+function começar_carrossel_vitor() {
+  if (slides_vitor.length > 0) {
+    slides_vitor[slide_vitor_index].classList.add("display_slide");
+    //  legenda_slides_vitor[slide_vitor_index].classList.add("display_p");
+    interval_id = setInterval(next_slide_vitor, 15000);
+  }
+}
+
+function show_slide_vitor(index) {
+  if (index >= slides_vitor.length) {
+    slide_vitor_index = 0;
+  } else if (index < 0) {
+    slide_vitor_index = slides_vitor.length - 1;
+  } else {
+    slide_vitor_index = index;
+  }
+
+  slides_vitor.forEach(slide => {
+    slide.classList.remove("display_slide");
+  });
+  // slides_vitor.forEach(p => { p.classList.remove("display_p");  });
+
+  slides_vitor[slide_vitor_index].classList.add("display_slide");
+  legenda_slides_vitor[slide_vitor_index].classList.add("display_p");
+}
+function prev_slide_vitor() {
+  clearInterval(interval_id);
+  slide_vitor_index--;
+  show_slide_vitor(slide_vitor_index);
+}
+
+function next_slide_vitor() {
+  clearInterval(interval_id);
+  slide_vitor_index++;
+  show_slide_vitor(slide_vitor_index);
+}

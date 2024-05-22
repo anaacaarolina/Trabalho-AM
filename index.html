@@ -132,17 +132,17 @@
         <div class="row">
           <div class="col">
             <div class="img-container">
-              <h2>SL Benfica</h2>
+              <h2>Alice Oliveira</h2>
             </div>
           </div>
           <div class="col">
             <div class="img-container">
-              <h2>Elvis Presley</h2>
+              <h2>Aníbal Simão</h2>
             </div>
           </div>
           <div class="col">
             <div class="img-container">
-              <h2>The Beatles</h2>
+              <h2>Vitor Coutinho</h2>
             </div>
           </div>
         </div>
@@ -232,112 +232,64 @@
         allowfullscreen
         id="video_alice"
       ></iframe>
-      <div class="container py-4">
-        <div
-          id="carouselExample"
-          class="carousel slide custom-carousel text-center"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item text-center active">
-              <img
-                src="assets/Alice Oliveira/alice_oliveira_1.JPG"
-                class="d-block"
-                alt="Imagem 1 da Alice Oliveira"
-              />
-              <div class="carousel-caption d-none d-md-block text-center">
-                <h5 class="text-center">Sr. Alice</h5>
-              </div>
-            </div>
-            <div class="carousel-item text-center">
-              <img
-                src="assets/Alice Oliveira/alice_oliveira_2.JPG"
-                class="d-block w-80"
-                alt="Imagem 2 da Alice Oliviera"
-              />
-              <div class="carousel-captiontext-center">
-                <h5 class="carousel-caption-top text-center">Recordações</h5>
-              </div>
-            </div>
-            <div class="carousel-item text-center">
-              <img
-                src="assets/Alice Oliveira/alice_oliveira_3.JPG"
-                class="d-block w-80"
-                alt="Imagem 3 da Alice Oliviera"
-              />
-              <div class="carousel-caption d-none d-md-block text-center">
-                <h5 class="text-center">Bilhetes dos jogos</h5>
-              </div>
-            </div>
-            <div class="carousel-item text-center">
-              <img
-                src="assets/Alice Oliveira/alice_oliveira_4.JPG"
-                class="d-block w-80"
-                alt="Imagem 4 da Alice Oliviera"
-              />
-              <div class="carousel-caption d-none d-md-block text-center">
-                <h5 class="legendas" style="color: #0a0a0a">
-                  Este quadro foi oferecido a Alice como comemoração dos seus 70
-                  anos
-                </h5>
-              </div>
-            </div>
-            <div class="carousel-item text-center">
-              <img
-                src="assets/Alice Oliveira/alice_oliveira_5.JPG"
-                class="d-block w-80"
-                alt="Imagem 5 da Alice Oliviera"
-              />
-              <div class="carousel-caption d-none d-md-block text-center">
-                <h5 class="text-center">Bilhetes dos jogos</h5>
-              </div>
-            </div>
-            <div class="carousel-item text-center">
-              <img
-                src="assets/Alice Oliveira/alice_oliveira_6.JPG"
-                class="d-block w-80"
-                alt="Imagem 6 da Alice Oliviera"
-              />
-              <div class="carousel-caption d-none d-md-block text-center">
-                <h5 class="text-center">Bilhetes dos jogos</h5>
-              </div>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="prev"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#e8e8e8"
-              width="30"
-              transform="rotate(180)"
-              height="30"
-            >
-              <path
-                d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z"
-              />
-            </svg>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="next"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#e8e8e8"
-              width="30"
-              height="30"
-            >
-              <path
-                d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z"
-              />
-            </svg>
-          </button>
+      <div class="carrossel">
+        <div class="slides_alice">
+          <img
+            class="slide_alice"
+            src="assets/Alice Oliveira/alice_oliveira_1.JPG"
+            alt="Alice Oliveira #1"
+          />
+          <img
+            class="slide_alice"
+            src="assets/Alice Oliveira/alice_oliveira_2.JPG"
+            alt="Alice Oliveira #2"
+          />
+          <img
+            class="slide_alice"
+            src="assets/Alice Oliveira/alice_oliveira_3.JPG"
+            alt="Alice Oliveira #3"
+          />
+          <img
+            class="slide_alice"
+            src="assets/Alice Oliveira/alice_oliveira_4.JPG"
+            alt="Alice Oliveira #4"
+          />
+          <img
+            class="slide_alice"
+            src="assets/Alice Oliveira/alice_oliveira_5.JPG"
+            alt="Alice Oliveira #5"
+          />
+          <img
+            class="slide_alice"
+            src="assets/Alice Oliveira/alice_oliveira_6.JPG"
+            alt="Alice Oliveira #6"
+          />
         </div>
+        <button class="prev" onclick="prev_slide_alice()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#e8e8e8"
+            width="30"
+            transform="rotate(180)"
+            height="30"
+          >
+            <path
+              d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z"
+            />
+          </svg>
+        </button>
+        <button class="next" onclick="next_slide_alice()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#e8e8e8"
+            width="30"
+            height="30"
+          >
+            <path
+              d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z"
+            />
+          </svg>
+        </button>
       </div>
       <footer class="footer_pagina">
         <div class="container text-center">
@@ -411,24 +363,77 @@
         allowfullscreen
         id="video_anibal"
       ></iframe>
-      <div id="carouselExample" class="carousel slide">
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+      <div class="carrossel">
+        <div class="slides_anibal">
+          <img
+            class="slide_anibal"
+            src="assets/Aníbal Simão/anibal_simao_1.JPG"
+            alt="Aníbal Simão #1"
+          />
+          <img
+            class="slide_anibal"
+            src="assets/Aníbal Simão/anibal_simao_2.JPG"
+            alt="Aníbal Simão #2"
+          />
+          <img
+            class="slide_anibal"
+            src="assets/Aníbal Simão/anibal_simao_3.JPG"
+            alt="Aníbal Simão #3"
+          />
+          <img
+            class="slide_anibal"
+            src="assets/Aníbal Simão/anibal_simao_4.JPG"
+            alt="Aníbal Simão #4"
+          />
+          <img
+            class="slide_anibal"
+            src="assets/Aníbal Simão/anibal_simao_5.JPG"
+            alt="Aníbal Simão #5"
+          />
+          <img
+            class="slide_anibal"
+            src="assets/Aníbal Simão/anibal_simao_6.JPG"
+          />
+          <img
+            class="slide_anibal"
+            src="assets/Aníbal Simão/anibal_simao_7.JPG"
+            alt="Aníbal Simão #7"
+          />
+          <img
+            class="slide_anibal"
+            src="assets/Aníbal Simão/anibal_simao_8.JPG"
+            alt="Aníbal Simão #8"
+          />
+          <img
+            class="slide_anibal"
+            src="assets/Aníbal Simão/anibal_simao_9.JPG"
+            alt="Aníbal Simão #9"
+          />
+        </div>
+        <button class="prev" onclick="prev_slide_anibal()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#e8e8e8"
+            width="30"
+            transform="rotate(180)"
+            height="30"
+          >
+            <path
+              d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z"
+            />
+          </svg>
         </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+        <button class="next" onclick="next_slide_anibal()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#e8e8e8"
+            width="30"
+            height="30"
+          >
+            <path
+              d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z"
+            />
+          </svg>
         </button>
       </div>
       <footer class="footer_pagina">
@@ -504,6 +509,65 @@
         allowfullscreen
         id="video_vitor"
       ></iframe>
+      <div class="carrossel">
+        <div class="slides_vitor">
+          <img
+            class="slide_vitor"
+            src="assets/Vitor Coutinho/vitor_coutinho_1.png"
+            alt="Vitor Coutinho #1"
+          />
+          <img
+            class="slide_vitor"
+            src="assets/Vitor Coutinho/vitor_coutinho_2.png"
+            alt="Vitor Coutinho #2"
+          />
+          <img
+            class="slide_vitor"
+            src="assets/Vitor Coutinho/vitor_coutinho_3.png"
+            alt="Vitor Coutinho #3"
+          />
+          <img
+            class="slide_vitor"
+            src="assets/Vitor Coutinho/vitor_coutinho_4.png"
+            alt="Vitor Coutinho #4"
+          />
+          <img
+            class="slide_vitor"
+            src="assets/Vitor Coutinho/vitor_coutinho_5.png"
+            alt="Vitor Coutinho #5"
+          />
+          <img
+            class="slide_vitor"
+            src="assets/Vitor Coutinho/vitor_coutinho_6.png"
+            alt="Vitor Coutinho #6"
+          />
+        </div>
+        <button class="prev" onclick="prev_slide_vitor()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#e8e8e8"
+            width="30"
+            transform="rotate(180)"
+            height="30"
+          >
+            <path
+              d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z"
+            />
+          </svg>
+        </button>
+        <button class="next" onclick="next_slide_vitor()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#e8e8e8"
+            width="30"
+            height="30"
+          >
+            <path
+              d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z"
+            />
+          </svg>
+        </button>
+      </div>
       <footer class="footer_pagina">
         <div class="container text-center">
           <div class="row justify-content-center">
