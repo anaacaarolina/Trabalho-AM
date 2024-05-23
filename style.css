@@ -7,10 +7,10 @@
 :root {
   --cinzento: #c0c0c0;
   --cinzento_claro: #d8d8d8;
-  --cinzento_escuro: #8e8e8e;
+  --cinzento_escuro: #919598;
   --cinzento_mais_escuro: #aaa;
-  --preto: #0a0a0a;
-  --azul: #2a368e;
+  --preto: #231f20;
+  --azul: #2c368c;
   --branco: #e8e8e8;
 }
 
@@ -427,7 +427,7 @@ p.display_p {
   font-size: 40px;
 }
 #Sobre_Nos h2 {
-  margin-bottom: 3%;
+  margin-bottom: 5%;
   margin-top: 2%;
   margin-left: 5%;
 }
