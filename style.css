@@ -19,10 +19,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Windows Regular";
+  cursor: url("assets/Imagens/cursor_default.png"), auto;
+}
+iframe {
+  cursor: url("assets/Imagens/cursor_pointer.png"), auto;
 }
 /*Body acaba aqui*/
 
 /*Caixa de erro começa aqui*/
+#error_window_section {
+  cursor: url("assets/Imagens/cursor_default.png"), auto;
+}
 .quadrado_grande {
   background-color: var(--cinzento);
   color: var(--preto);
@@ -77,6 +84,7 @@ body {
 .botao_da_caixa {
   text-align: center;
   padding-bottom: 4%;
+  cursor: url("assets/Imagens/cursor_pointer.png"), auto;
 }
 .botao_ok {
   font-family: "Windows Regular";
@@ -89,10 +97,11 @@ body {
   border-bottom: var(--preto) 2px solid;
   border-left: var(--branco) 2px solid;
   border-top: var(--branco) 2px solid;
-  cursor: pointer;
+  cursor: url("assets/Imagens/cursor_pointer.png"), auto;
 }
 .botao_ok:hover {
   box-shadow: 0px 0px 3px #0a0a0a;
+  cursor: url("assets/Imagens/cursor_pointer.png"), auto;
 }
 .botao_ok:active {
   background-color: var(--cinzento_escuro);
@@ -176,7 +185,7 @@ body {
   border-bottom: var(--preto) 2px solid;
   border-left: var(--branco) 2px solid;
   border-top: var(--branco) 2px solid;
-  cursor: pointer;
+  cursor: url("assets/Imagens/cursor_pointer.png"), auto;
 }
 #botao_ok_maior:hover {
   box-shadow: 0px 0px 3px #0a0a0a;
@@ -200,6 +209,7 @@ header {
 }
 .logo {
   max-width: 90px;
+  cursor: url("assets/Imagens/cursor_pointer.png"), auto;
 }
 header .container-fluid {
   background-color: var(--cinzento_mais_escuro);
@@ -214,7 +224,7 @@ header .nav-link-vitor,
 header .nav-link-conclusao {
   background-color: var(--cinzento);
   color: var(--preto);
-  cursor: pointer;
+  cursor: url("assets/Imagens/cursor_pointer.png"), auto;
   text-decoration: none;
   margin-top: 10px;
   margin-left: 5px;
@@ -274,9 +284,10 @@ header .nav-link-conclusao:active {
   margin: 0 auto;
   margin-top: 2%;
   margin-bottom: 5%;
+  cursor: url("assets/Imagens/cursor_pointer.png"), auto;
 }
 #homepage .pastas_fechadas {
-  cursor: pointer;
+  cursor: url("assets/Imagens/cursor_pointer.png"), auto;
   width: 35%;
   max-width: 187px;
 }
@@ -315,6 +326,7 @@ header .nav-link-conclusao:active {
   margin: 0 auto;
   margin-top: 2%;
   margin-bottom: 5%;
+  cursor: url("assets/Imagens/cursor_pointer.png"), auto;
 }
 .paginas_pessoais .pastas_fechadas {
   max-width: 70%;
@@ -326,7 +338,7 @@ header .nav-link-conclusao:active {
   float: right;
   margin-right: 2%;
   margin-top: 2%;
-  cursor: pointer;
+  cursor: url("assets/Imagens/cursor_pointer.png"), auto;
 }
 /*Carrossel de imagens começa aqui*/
 .carrossel {
@@ -359,7 +371,10 @@ p.display_p {
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  cursor: pointer;
+}
+.botoes_next,
+.botoes_prev {
+  cursor: url("assets/Imagens/cursor_pointer.png"), pointer;
 }
 .prev {
   left: 0;
@@ -412,6 +427,7 @@ p.display_p {
   margin: 0 auto;
   margin-top: 2%;
   margin-bottom: 5%;
+  cursor: url("assets/Imagens/cursor_pointer.png"), auto;
 }
 /*Página Conclusao acaba aqui*/
 
@@ -470,7 +486,7 @@ footer .texto_footer_inicio {
   border-bottom: var(--preto) 2px solid;
   border-left: var(--branco) 2px solid;
   border-top: var(--branco) 2px solid;
-  cursor: pointer;
+  cursor: url("assets/Imagens/cursor_pointer.png"), auto;
   text-align: center;
 }
 footer .texto_footer_sobre_nos:hover,
